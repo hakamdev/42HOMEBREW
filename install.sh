@@ -14,6 +14,12 @@ mkdir /goinfre/$(whoami)/.brew
 ln -s /goinfre/$(whoami)/.brew $HOME/.brew
 git clone --depth=1 https://github.com/Homebrew/brew $HOME/.brew
 
+# Create Extra Symlinks for Minikube and Docker
+rm -rf $HOME/.minikube $HOME/goinfre/.minikube $HOME/.docker $HOME/goinfre/.docker
+mkdir /goinfre/$(whoami)/.minikube /goinfre/$(whoami)/.docker
+ln -s /goinfre/$(whoami)/.minikube $HOME/.minikube
+ln -s /goinfre/$(whoami)/.docker $HOME/.docker
+
 # Create .brewconfig script in home directory 
 cat > $HOME/.brewconfig.zsh <<EOL
 # HOMEBREW CONFIG
