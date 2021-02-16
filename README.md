@@ -11,6 +11,13 @@ Works on **ISCSI sessions**, and fixes `flock` issues on **NFS sessions**.
 
 Moves temporary Homebrew data (`Temp` and `Cache`) to `/tmp`, leaving your home directory cleaner.
 
+Edit
+----
+Now Homebrew will be installed into goinfre instead to save space on your `$HOME`.
+
+The `install.sh` script will also create some useful symlinks for `minikube` and `docker` so that they get installed in `goinfre` too.
+
+NB: If `/goinfre/$(whoami)/` is not the actual path for `goinfre` in your school, consider changing it before running the script, you can replace it with `$HOME/goinfre/`.
 
 Install
 -------
