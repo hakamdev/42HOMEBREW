@@ -9,7 +9,9 @@
       ## ## ##."
 
 # Delete and reinstall Homebrew from Github repo
-rm -rf $HOME/.brew
+rm -rf $HOME/.brew $HOME/goinfre/.brew
+mkdir /goinfre/$(whoami)/.brew
+ln -s /goinfre/$(whoami)/.brew $HOME/.brew
 git clone --depth=1 https://github.com/Homebrew/brew $HOME/.brew
 
 # Create .brewconfig script in home directory 
