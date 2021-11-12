@@ -10,15 +10,15 @@
 
 # Delete and reinstall Homebrew from Github repo
 rm -rf $HOME/.brew $HOME/goinfre/.brew
-mkdir /goinfre/$(whoami)/.brew
-ln -s /goinfre/$(whoami)/.brew $HOME/.brew
+mkdir $HOME/goinfre/.brew
+ln -s $HOME/goinfre/.brew $HOME/.brew
 git clone --depth=1 https://github.com/Homebrew/brew $HOME/.brew
 
 # Create Extra Symlinks for Minikube and Docker
 rm -rf $HOME/.minikube $HOME/goinfre/.minikube $HOME/.docker $HOME/goinfre/.docker
-mkdir /goinfre/$(whoami)/.minikube /goinfre/$(whoami)/.docker
-ln -s /goinfre/$(whoami)/.minikube $HOME/.minikube
-ln -s /goinfre/$(whoami)/.docker $HOME/.docker
+mkdir $HOME/goinfre/.minikube $HOME/goinfre/.docker
+ln -s $HOME/goinfre/.minikube $HOME/.minikube
+ln -s $HOME/goinfre/.docker $HOME/.docker
 
 # Create .brewconfig script in home directory 
 cat > $HOME/.brewconfig.zsh <<EOL
