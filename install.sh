@@ -15,10 +15,11 @@ ln -s $HOME/goinfre/.brew $HOME/.brew
 git clone --depth=1 https://github.com/Homebrew/brew $HOME/.brew
 
 # Create Extra Symlinks for Minikube and Docker
-rm -rf $HOME/.minikube $HOME/goinfre/.minikube $HOME/.docker $HOME/goinfre/.docker
-mkdir $HOME/goinfre/.minikube $HOME/goinfre/.docker
+rm -rf $HOME/.minikube $HOME/goinfre/.minikube $HOME/.docker $HOME/goinfre/.docker $HOME/goinfre/.kube
+mkdir $HOME/goinfre/.minikube $HOME/goinfre/.docker $HOME/goinfre/.kube
 ln -s $HOME/goinfre/.minikube $HOME/.minikube
 ln -s $HOME/goinfre/.docker $HOME/.docker
+ln -s $HOME/goinfre/.kube $HOME/.kube
 
 # Create .brewconfig script in home directory 
 cat > $HOME/.brewconfig.zsh <<EOL
